@@ -49,6 +49,14 @@ Complete only the sections relevant to the current stage. Mark missing informati
 - **Information boundary and fairness:** Leakage, comparable controls, and evaluation protocol.
 - **Budget and stop rule:** Time, compute, calls or tokens, and number of runs.
 - **Interpretation by outcome:** How each possible result would support or weaken the idea; unresolved alternatives.
+- **Resolved run configuration:** Purpose; code/environment versions; data/split/sample selection and size; arms/baselines; models/providers; prompts; hyperparameters/seeds/repetitions; evaluator/metrics; concurrency/timeouts/retries; cost/stop limits; output location. Show effective defaults and exclude secrets.
+- **Configuration confirmation:** Snapshot ID or path, exact run or enumerated batch covered, and the user's explicit confirmation. Pending confirmation means do not launch, including validation runs and reruns. A new launch or changed configuration needs fresh confirmation.
+- **Validation coverage before scaling:**
+
+| Required arm, route, or pipeline path | Minimal real end-to-end run | Evidence it runs | Evidence it implements and evaluates the intended experiment correctly | Pass / fail / not checked |
+| --- | --- | --- | --- | --- |
+
+- **Scale decision:** Every required path passes with no unresolved correctness issues; proposed larger configuration separately confirmed by the user. Otherwise remain at the validation stage.
 - **Status:** Plan only / authorized to execute / executed.
 
 ## D. Result of one experiment, interpreted against the idea

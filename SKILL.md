@@ -50,6 +50,14 @@ Before execution, write a reproducible experiment card: fixed claim and predicti
 
 A positive pilot justifies further testing; it does not by itself prove the mechanism, novelty, or a paper-level contribution. If the pilot has no positive signal, report that the current evidence does not support the idea. Diagnose implementation or measurement errors when warranted, but preserve the original result and claim. Do not change the target, metric, sample, or story after seeing results to manufacture success.
 
+### Confirm every run and verify correctness before scaling
+
+Before every experiment launch, present the complete resolved configuration to the user and wait for explicit confirmation. This includes validation runs, pilots, reruns after fixes, and larger experiments. Include the purpose; code and environment versions; data, split, sample selection and size; arms and baselines; model/provider routes; prompt versions; hyperparameters, seeds and repetitions; evaluator and metrics; concurrency, timeouts and retry policy; cost limits, stop rules, and output location. Resolve implicit defaults and omit secret values. Record the configuration snapshot and the user's confirmation. Approval covers only that run or an explicitly enumerated batch; a new launch or configuration change requires fresh confirmation. Execution within an already approved run does not require repeated approval for each internal step.
+
+Before any increase beyond the smallest validation scale, verify the entire planned experiment with minimal end-to-end runs. Cover every planned arm, baseline, model/provider route, dataset format, and evaluation path using the intended execution stack and representative real inputs. Check both successful execution and semantic correctness: the intended method and settings were actually used, inputs and labels align, treatments and controls follow the protocol, outputs are valid, scoring and aggregation are correct, and saved records allow reproduction. Inspect raw traces and independently check representative scores; a successful exit, mock run, or plausible aggregate metric alone is insufficient.
+
+Maintain a coverage table with the evidence and pass/fail/not-checked status of each required path. All required checks must pass, with no unresolved correctness issues, before even a moderately larger run. After a change, recheck affected paths and confirm the new configuration. Present the validation evidence together with the proposed larger-run configuration for the user's confirmation before launch; positive pilot results do not bypass either gate.
+
 ## 5. Interpret every result against the original idea
 
 Preserve the planned protocol, deviations, configuration, data and code versions, raw outputs, and actual cost. For each run, answer:
