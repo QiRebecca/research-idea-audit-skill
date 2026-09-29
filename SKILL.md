@@ -24,6 +24,8 @@ Prepare an idea dossier that addresses each item explicitly:
 
 Submit this case for the user's review, marking unverified facts, assumptions, and open choices. If the user requests a complete review in one pass, include the later checks in the same document while clearly distinguishing a **proposed** research line from one the user has **approved**. Do not approve or freeze it on the user's behalf.
 
+Maintain the dossier as a living, versioned research record. Keep its background and related-work papers current, with primary sources, the claims actually checked, and the date checked. When new literature or evidence changes the background, gap, novelty, contribution, story, or experiment rationale, update the affected sections and log what changed and why. Preserve earlier versions, user decisions, and contrary evidence rather than silently rewriting the research line.
+
 ## 2. Audit novelty against the closest work
 
 Find the studies most likely to anticipate the claim. Check original papers, official code, and formal appendices when available, including versions and dates. Do not rely on titles, search snippets, or memory in place of the source. Compare, paper by paper: overlap, the prior contribution's actual boundary, this idea's precise increment, the evidence needed to establish that increment, and the strongest counterexample.

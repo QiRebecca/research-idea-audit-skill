@@ -8,6 +8,7 @@ Complete only the sections relevant to the current stage. Mark missing informati
 - **One-sentence claim:** Under what conditions should which mechanism cause which observable change?
 - **Background:** Problem, current approaches, setting, and significance.
 - **Related work:** Closest studies, their actual contributions and evidential limits, and primary sources.
+- **Literature record:** For background and related-work papers, record the source and version, the claims checked, the date checked, and which part of the research case each paper informs.
 - **Research gap:** The gap derived from existing work and the finding that would invalidate it.
 - **Meaning:** Scientific significance and practical value if the claim holds.
 - **Idea:** Mechanism, necessary assumptions, scope, and failure modes.
@@ -59,3 +60,8 @@ Complete only the sections relevant to the current stage. Mark missing informati
 - **Alternative explanations and limits:** What remains unresolved and what cannot be claimed.
 - **Next decision:** Continue / repair and rerun / pause / stop; reason and incremental cost.
 - **Idea revision log:** If a new claim is proposed, give it a new version and repeat the review. Preserve the original claim and results.
+
+## E. Document maintenance log
+
+| Date and version | New or rechecked paper/evidence and source | Sections affected | What changed and why | Prior claim or user decision retained |
+| --- | --- | --- | --- | --- |
